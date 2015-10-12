@@ -1,0 +1,10 @@
+{
+  "name": "simplenodejsserver",
+  "private": true,
+  "version": "0.0.1",
+  "description": "Servidor con un formulario sencillo",
+  "author": "Fernando de la Iglesia <fernando.delaigleisa@gmail.com>",
+  "dependencies": {
+    "formidable": "1.0.17"
+  }
+}
