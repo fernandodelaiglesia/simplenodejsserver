@@ -10,7 +10,7 @@ http.createServer(function (req, res) {
          // show the user a simple form
           console.log("[200] " + req.method + " to " + req.url);
           res.writeHead(200, "OK", {'Content-Type': 'text/html'});
-          res.write('<html><head><title>Hello Noder!</title></head><body>');
+          res.write('<html><head><title>Hello Noder!</title></head><body background="logo.jpg">');
           res.write('<h1>Welcome Noder, who are you?</h1>');
           res.write('<form enctype="multipart/form-data" action="/formhandler" method="post">');
           res.write('Name: <input type="text" name="username" value="John Doe" /><br />');
