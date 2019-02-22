@@ -17,7 +17,7 @@ http.createServer(function (req, res) {
           res.write('Age: <input type="text" name="userage" value="99" /><br />');
           res.write('File :<input type="file" name="upload" multiple="multiple"><br>');
           res.write('<input type="submit" />');
-          res.write('</form></body></html');
+          res.write('</form></body></html>');
           res.end();
       break;
     case '/formhandler':
@@ -36,8 +36,12 @@ http.createServer(function (req, res) {
                       console.log('It\'s saved!');
                 });
 
-              res.writeHead(200, {'content-type': 'text/plain'});
+              res.writeHead(200,"OK", {'content-type': 'text/html'});
+              res.write('<html><head><title>Hello Noder!</title></head><body background="logo.jpg">');
+              res.write('<h1>Welcome Noder, who are you?</h1>');
               res.write('received upload:\n\n');
+              res.write('Go back <a href="/">here</a>\n\n');
+              res.write('</body></html>');
               res.end();
             });
             req.on('end', function() {
